@@ -1,0 +1,23 @@
+
+
+body{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+.container{
+	max-width: 1210px;
+	padding-inline: 5px;
+	margin: 0 auto;
+}
+
+img,
+svg {
+	max-width: 100%;
+	height: auto;
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
