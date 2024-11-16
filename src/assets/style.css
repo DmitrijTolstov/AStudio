@@ -1,23 +1,42 @@
-
-
-body{
-	margin: 0;
-	padding: 0;
-	box-sizing: border-box;
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  cursor: none;
 }
 
-.container{
-	max-width: 1210px;
-	padding-inline: 5px;
-	margin: 0 auto;
+button,
+a,
+input {
+  cursor: none;
+}
+.container {
+  max-width: 1210px;
+  padding-inline: 5px;
+  margin: 0 auto;
 }
 
 img,
 svg {
-	max-width: 100%;
-	height: auto;
+  max-width: 100%;
+  height: auto;
 }
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer components {
+  .cursor {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: black;
+    z-index: 100;
+    user-select: none;
+    pointer-events: none;
+  }
+}
