@@ -5,6 +5,8 @@ const __dirname = path.dirname(fileURLToPath(import.meta.url))
 
 import HtmlWebpackPlugin from 'html-webpack-plugin'
 import CopyPlugin from 'copy-webpack-plugin'
+import MiniCssExtractPlugin from 'mini-css-extract-plugin'
+
 
 export default {
   mode: 'production',
@@ -21,7 +23,7 @@ export default {
   plugins:[
 		new HtmlWebpackPlugin({
 		title:'A+Studio',
-		template:path.resolve(__dirname, './src/index.html'),
+		template:path.resolve('./src/index.html'),
 		filename:'main.html'
 
 	}),
@@ -32,13 +34,16 @@ export default {
           to: path.resolve(__dirname, 'dist/assets/images')
 			},
 		]
+	}),
+	new MiniCssExtractPlugin({
+		filename:'style.css'
 	})
 ],
 	module:{
 		rules:[
 			{
 			test: /\.css$/i,
-			 use: ['style-loader', 'css-loader', 'postcss-loader'],
+			use:[MiniCssExtractPlugin.loader, 'css-loader', 'postcss-loader']
       },
 		]
 	},
