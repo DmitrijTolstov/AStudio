@@ -1,7 +1,7 @@
+import autoprefixer from 'autoprefixer';
 import tailwindcss from 'tailwindcss';
-module.exports = {
-	plugins:[
-		tailwindcss
-	]
-		
-}
+export  const plugins = [
+	'postcss-preset-env',
+	tailwindcss,
+	autoprefixer()
+];
