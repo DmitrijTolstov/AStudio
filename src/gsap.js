@@ -65,10 +65,10 @@ gsap.to('.img-2',{
 })
 
 gsap.to('.title-client',{
-  duration:1,
   text:'Our client',
-  delimiters:'',
+  duration:1.5,
   opacity:1,
+  repeat:-1
 })
 
 gsap.to('.text-client',{
@@ -164,24 +164,7 @@ let hover = gsap.to(photo,{
   })
 })
 
-gsap.to('.slider-img',{
-    x:-500,
-      scrollTrigger:{
- scrub:1,
-    start:'top center',
-    trigger:'.slider-wrapper',
-}
-    
-})
 
-gsap.to('.slider-content',{
-    x:700,
-   scrollTrigger:{
- scrub:1,
-    start:'top center',
-    trigger:'.slider-wrapper',
-}
-})
 
 
 

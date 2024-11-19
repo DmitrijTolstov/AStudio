@@ -6,8 +6,9 @@
   "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "webpack",
-    "serve": "webpack-dev-server"
+    "dev": "webpack./webpack.dev.js ",
+    "build": "webpack --config ./webpack.prod.js ",
+    "serve": "webpack serve --config ./webpack.dev.js "
   },
   "author": "",
   "license": "ISC",
@@ -21,6 +22,7 @@
     "postcss-preset-env": "^10.1.0",
     "style-loader": "^4.0.0",
     "tailwindcss-webpack-plugin": "^0.0.12",
+    "terser-webpack-plugin": "^5.3.10",
     "webpack": "^5.96.1",
     "webpack-cli": "^5.1.4",
     "webpack-dev-server": "^5.1.0"
