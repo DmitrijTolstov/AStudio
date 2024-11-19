@@ -1,5 +1,5 @@
 import tailwindcss from 'tailwindcss';
-export const plugins = [
+export  const plugins = [
 	'postcss-preset-env',
 	tailwindcss
 ];

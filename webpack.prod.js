@@ -36,7 +36,7 @@ export default {
 		]
 	}),
 	new MiniCssExtractPlugin({
-		filename:'style.css'
+		filename:'index.css'
 	})
 ],
 	module:{
