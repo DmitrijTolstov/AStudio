@@ -13,7 +13,7 @@ export default {
   entry: './src/index.js',
   output: {
     path: path.resolve(__dirname, 'dist'),
-    filename: 'main.js',
+    filename: 'index.js',
 	clean:true
   },
   optimization: {
@@ -24,7 +24,7 @@ export default {
 		new HtmlWebpackPlugin({
 		title:'A+Studio',
 		template:path.resolve('./src/index.html'),
-		filename:'main.html'
+		filename:'index.html'
 
 	}),
 	new CopyPlugin({
